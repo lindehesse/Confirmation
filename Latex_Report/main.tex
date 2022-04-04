@@ -1,0 +1,117 @@
+\documentclass[12pt]{ociamthesis}  % default square logo 
+%\documentclass[12pt,beltcrest]{ociamthesis} % use old belt crest logo
+%\documentclass[12pt,shieldcrest]{ociamthesis} % use older shield crest logo
+
+%load any additional packages
+\usepackage{amssymb}
+\usepackage{pdfpages}
+\usepackage{enumitem }
+\usepackage{xspace}
+\usepackage{pgfgantt}
+\usepackage[font=small,labelfont=bf]{caption}
+\usepackage{titlesec}
+
+\newcommand{\RomanNumeralCaps}[1]
+    {\MakeUppercase{\romannumeral #1}}
+
+
+\newcommand*{\ie}{\emph{i.e.}\@\xspace}
+
+
+%\renewcommand\thesection{\arabic{section}}
+
+%input macros (i.e. write your own macros file called mymacros.tex 
+%and uncomment the next line)
+%\include{mymacros}
+
+\title{Interpretable Deep Learning for the Quantification of Fetal Brain Development}   %note \\[1ex] is a line break in the title
+
+\author{Linde Sterre Hesse}             %your name
+\college{St Edmund Hall}  %your college
+
+%\renewcommand{\submittedtext}{change the default text here if needed}
+\degree{Confirmation of Status}     %the degree
+\degreedate{\today}         %the degree date
+
+
+%end the preamble and start the document
+\begin{document}
+
+%this baselineskip gives sufficient line spacing for an examiner to easily
+%markup the thesis with comments
+\baselineskip=18pt plus1pt
+
+%set the number of sectioning levels that get number and appear in the contents
+\setcounter{secnumdepth}{3}
+\setcounter{tocdepth}{3}
+
+
+\maketitle                  % create a title page from the preamble info
+%\include{dedication}        % include a dedication.tex file
+%\include{acknowledgements}  % include an acknowledgements.tex file
+%\include{abstract}          % include the abstract
+
+\begin{romanpages}          % start roman page numbering
+\tableofcontents            % generate and include a table of contents
+%\listoffigures              % generate and include a list of figures
+\end{romanpages}            % end roman page numbering
+
+
+% Chp 1
+%\addcontentsline{toc}{chapter}{1\quad Annotate a 3D Volume from a Single Slice}
+\chapter{INSightR-Net: Interpretable Neural Network for
+Regression using Similarity-based Comparisons
+to Prototypical Examples}
+\label{chapter1}
+The following paper was submitted to MICCAI 2022 and is currently under review.
+\includepdf[pages=1-,pagecommand={}]{Chp_1/Final_Manuscript_NonAnon.pdf}
+
+% Chp 2
+%\addcontentsline{toc}{chapter}{2\quad Plan for Completion}
+\include{Chp_2/Chp_2}
+
+% Chp 3
+%\addcontentsline{toc}{chapter}{1\quad Annotate a 3D Volume from a Single Slice}
+
+\include{Chp_3/Chp_3.tex}
+
+
+\includepdf[pages=6-,pagecommand={}]{GSO_Form.pdf}
+                                               
+
+                              
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+%%now include the files of latex for each of the chapters etc
+%\include{chapter1}
+%\include{chapter2}
+%\include{conclusions}
+%
+%%now enable appendix numbering format and include any appendices
+%\appendix
+%\include{appendix1}
+%\include{appendix2}
+%
+%%next line adds the Bibliography to the contents page
+%\addcontentsline{toc}{chapter}{Bibliography}
+%%uncomment next line to change bibliography name to references
+%%\renewcommand{\bibname}{References}
+%\bibliography{refs}        %use a bibtex bibliography file refs.bib
+%\bibliographystyle{plain}  %use the plain bibliography style
+
+\end{document}
